@@ -17,7 +17,7 @@
     "@icedesign/layout": "^0.1.2",
     "@icedesign/menu": "^0.1.1",
     "@icedesign/skin": "^0.1.0",
-    "@icedesign/theme": "^1.0.0",
+    "@icedesign/title": "^0.1.1",
     "axios": "^0.16.2",
     "babel-polyfill": "^6.26.0",
     "bizcharts": "^3.1.5",
@@ -49,8 +49,7 @@
     "swagger-vue": "^1.0.3",
     "utils": "^0.3.1",
     "webpack": "^4.16.4",
-    "weui": "^2.0.1",
-    "@icedesign/title": "^0.1.1"
+    "weui": "^2.0.1"
   },
   "publishConfig": {
     "registry": "http://registry.npmjs.com",
@@ -66,17 +65,19 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.5.1",
     "html-webpack-plugin": "^3.2.0",
-    "ice-plugin-fusion": "^0.1.4",
-    "ice-plugin-moment-locales": "^0.1.0",
-    "ice-scripts": "^2.1.9"
+    "ice-scripts": "^1.6.1"
   },
   "scripts": {
-    "start": "ice-scripts dev",
-    "build": "ice-scripts build",
-    "build-pro": "cross-env ENV=pro node ./src/apis/apiGenerator && cross-env BUILD_HASH=true HASH=true ENV=pro ice-scripts build",
-    "build-uat": "cross-env ENV=uat node ./src/apis/apiGenerator && cross-env BUILD_HASH=true HASH=true ENV=uat ice-scripts build",
+    "start": "ice dev",
+    "build": "ice build",
+    "build-pro": "cross-env ENV=pro node ./src/apis/apiGenerator && cross-env BUILD_HASH=true HASH=true ENV=pro ice build",
+    "build-uat": "cross-env ENV=uat node ./src/apis/apiGenerator && cross-env BUILD_HASH=true HASH=true ENV=uat ice build",
     "lint": "eslint . --ext '.js,.jsx' --fix",
     "gen-sdk": "node ./src/apis/apiGenerator"
+  },
+  "buildConfig": {
+    "theme": "@icedesign/skin",
+    "entry": "src/index.js"
   },
   "scaffoldConfig": {
     "name": "ice-reviews-management",
