@@ -18,7 +18,7 @@
     "@icedesign/menu": "^0.1.1",
     "@icedesign/skin": "^0.1.0",
     "@icedesign/theme": "^1.0.0",
-    "axios": "^0.16.2",
+    "axios": "^0.19.0",
     "babel-polyfill": "^6.26.0",
     "bizcharts": "^3.1.5",
     "classnames": "^2.2.5",
